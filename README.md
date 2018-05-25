@@ -10,8 +10,7 @@ Boa sorte! ;)
 
 
 # Observações
-(1) Tempo de loading varia de maquina para maquina;
-(2) Deixar marcado "Permit extended (pseudo) instructions and formats" e "Delayed branching" em Settings.
+(1) Tempo de loading varia de maquina para maquina;                                                                          (2) Deixar marcado "Permit extended (pseudo) instructions and formats" e "Delayed branching" em Settings.
 
 
 (C)2017 Leonardo G Coelho. Undertale eh uma obra de Toby Fox. Todos direitos reservados.
