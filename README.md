@@ -12,4 +12,4 @@ Inspired in Toby Fox's Undertale.
 
 
 # Licenses
- ©2017 Leonardo G Coelho. Undertale eh uma obra de Toby Fox. Todos direitos reservados.
+ ©2017 Leonardo G Coelho. Undertale é uma obra de Toby Fox. Todos direitos reservados.
