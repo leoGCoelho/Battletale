@@ -79,6 +79,8 @@
 		nop
 		jal fundo1
 		nop
+		jal titleScreen
+		nop
 		jal cor_branco
 		nop
 		jal startMsg
@@ -182,6 +184,60 @@
 		nop
 		
 		j endGame
+		nop
+
+
+	titleScreen:	
+		addi $sp, $sp, -4 #tiramos o espaço de memoria
+		sw $ra, ($sp)
+		jal def_dog
+		nop
+		lw $ra, ($sp)
+		addi $sp, $sp ,4
+		
+		addi $sp, $sp, -4 #tiramos o espaço de memoria
+		sw $ra, ($sp)
+		jal delay3
+		nop
+		lw $ra, ($sp)
+		addi $sp, $sp ,4
+			
+		addi $sp, $sp, -4 #tiramos o espaço de memoria
+		sw $ra, ($sp)
+		jal cor_branco
+		nop
+		lw $ra, ($sp)
+		addi $sp, $sp ,4
+		
+		addi $sp, $sp, -4 #tiramos o espaço de memoria
+		sw $ra, ($sp)
+		jal title
+		nop
+		lw $ra, ($sp)
+		addi $sp, $sp ,4 
+		
+		addi $sp, $sp, -4 #tiramos o espaço de memoria
+		sw $ra, ($sp)
+		jal delay8
+		nop
+		lw $ra, ($sp)
+		addi $sp, $sp ,4
+		
+		addi $sp, $sp, -4 #tiramos o espaço de memoria
+		sw $ra, ($sp)
+		jal cor_preto
+		nop
+		lw $ra, ($sp)
+		addi $sp, $sp ,4
+		
+		addi $sp, $sp, -4 #tiramos o espaço de memoria
+		sw $ra, ($sp)
+		jal title
+		nop
+		lw $ra, ($sp)
+		addi $sp, $sp ,4 
+		
+		jr $ra
 		nop
 
 	death:
@@ -769,6 +825,7 @@
 		jal msg1
 		nop
 		lw $ra, ($sp)
+		
 		addi $sp, $sp ,4
 		addi $sp, $sp, -4 #tiramos o espaço de memoria
 		sw $ra, ($sp)
@@ -776,11 +833,13 @@
 		nop
 		lw $ra, ($sp)
 		addi $sp, $sp ,4
+		
 		addi $sp, $sp, -4 #tiramos o espaço de memoria
 		sw $ra, ($sp)
 		jal cor_preto
 		nop
 		lw $ra, ($sp)
+		
 		addi $sp, $sp ,4
 		addi $sp, $sp, -4 #tiramos o espaço de memoria
 		sw $ra, ($sp)
@@ -788,6 +847,7 @@
 		nop
 		lw $ra, ($sp)
 		addi $sp, $sp ,4
+		
 		addi $sp, $sp, -4 #tiramos o espaço de memoria
 		sw $ra, ($sp)
 		jal cor_branco
@@ -7932,7 +7992,35 @@
 		
 		jr $ra
 		nop
+	
+	sad:
+		sw $s3, 21184($t0)
+		sw $s3, 21188($t3)
+		sw $s3, 21696($t0)
+		sw $s3, 21700($t0)
+		#
+		sw $s3, 21224($t0)
+		sw $s3, 21228($t0)
+		sw $s3, 21736($t0)
+		sw $s3, 21740($t0)
 		
+		jr $ra
+		nop
+		
+	happy:
+		sw $s3, 19136($t0)
+		sw $s3, 19140($t3)
+		sw $s3, 19648($t0)
+		sw $s3, 19652($t0)
+		#
+		sw $s3, 19176($t0)
+		sw $s3, 19180($t0)
+		sw $s3, 19688($t0)
+		sw $s3, 19692($t0)
+	
+		jr $ra
+		nop
+	
 	winMsg:
 		sw $s3, 36392($t3)
 		sw $s3, 36400($t3)
@@ -8096,6 +8184,124 @@
 		sw $s3, 36996($t0)
 		sw $s3, 37508($t0)
 		sw $s3, 38532($t0)
+		
+		jr $ra
+		nop
+		
+	title:
+		## B
+		sw $s3, 25100($t0)
+		sw $s3, 25104($t0)
+		sw $s3, 25612($t0)
+		sw $s3, 25616($t0)
+		#
+		sw $s3, 25108($t0)
+		sw $s3, 25112($t0)
+		sw $s3, 25620($t0)
+		sw $s3, 25624($t0)
+		#
+		sw $s3, 25116($t0)
+		sw $s3, 25120($t0)
+		sw $s3, 25628($t0)
+		sw $s3, 25632($t0)
+		##
+		sw $s3, 26124($t0)
+		sw $s3, 26128($t0)
+		sw $s3, 26636($t0)
+		sw $s3, 26640($t0)
+		#
+		sw $s3, 26140($t0)
+		sw $s3, 26144($t0)
+		sw $s3, 26652($t0)
+		sw $s3, 26656($t0)
+		##
+		sw $s3, 27148($t0)
+		sw $s3, 27152($t0)
+		sw $s3, 27660($t0)
+		sw $s3, 27664($t0)
+		#
+		sw $s3, 27156($t0)
+		sw $s3, 27160($t0)
+		sw $s3, 27668($t0)
+		sw $s3, 27672($t0)
+		#
+		sw $s3, 27164($t0)
+		sw $s3, 27168($t0)
+		sw $s3, 27676($t0)
+		sw $s3, 27680($t0)
+		#
+		sw $s3, 27172($t0)
+		sw $s3, 27176($t0)
+		sw $s3, 27684($t0)
+		sw $s3, 27688($t0)
+		#
+		sw $s3, 27180($t0)
+		sw $s3, 27184($t0)
+		sw $s3, 27692($t0)
+		sw $s3, 27696($t0)
+		##
+		sw $s3, 28172($t0)
+		sw $s3, 28176($t0)
+		sw $s3, 28684($t0)
+		sw $s3, 28688($t0)
+		#
+		sw $s3, 28180($t0)
+		sw $s3, 28184($t0)
+		sw $s3, 28692($t0)
+		sw $s3, 28696($t0)
+		#
+		sw $s3, 28188($t0)
+		sw $s3, 28192($t0)
+		sw $s3, 28700($t0)
+		sw $s3, 28704($t0)
+		#
+		sw $s3, 28204($t0)
+		sw $s3, 28208($t0)
+		sw $s3, 28716($t0)
+		sw $s3, 28720($t0)
+		##
+		sw $s3, 29196($t0)
+		sw $s3, 29200($t0)
+		sw $s3, 29708($t0)
+		sw $s3, 29712($t0)
+		#
+		sw $s3, 29204($t0)
+		sw $s3, 29208($t0)
+		sw $s3, 29716($t0)
+		sw $s3, 29720($t0)
+		#
+		sw $s3, 29212($t0)
+		sw $s3, 29216($t0)
+		sw $s3, 29724($t0)
+		sw $s3, 29728($t0)
+		#
+		sw $s3, 29220($t0)
+		sw $s3, 29224($t0)
+		sw $s3, 29732($t0)
+		sw $s3, 29736($t0)
+		#
+		sw $s3, 29228($t0)
+		sw $s3, 29232($t0)
+		sw $s3, 29740($t0)
+		sw $s3, 29744($t0)
+		
+		## A
+		
+		## T
+		
+		## T
+		
+		## L
+		
+		## E
+		
+		## T
+		
+		## A
+		
+		## L
+		
+		## E
 		
 		jr $ra
 		nop
