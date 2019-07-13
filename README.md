@@ -1,4 +1,5 @@
 # Battletale
+#### en/US | <a href="https://github.com/leoGCoelho/Battletale/blob/master/README_PTBR.md">pt/BR</a>
 Game developed in MIPS Assembler Runtime Simulator (MARS), using MIPS Assembly.
 Inspired in Toby Fox's Undertale.
 
@@ -11,7 +12,7 @@ I'm Flowey!
 
 Flowey, the flower!
 
-I want to test you to see if you have the same determination. Your goal is simple, my dear:
+I want to test you to see if you have the same determination as Fr... . Your goal is simple, my dear:
 Defeat the Annoying Dog.
 
 ## Gameplay
@@ -22,7 +23,7 @@ To do this, fight him to end your life, or show him mercy and just argue with hi
 To defend yourself from Annoying Dog, you must go through the puzzles without failing, otherwise you will take a small damage.
 Good luck! ;)
 
-## Commands
+### Commands
 - "1234" = move / select
 - "x" = confirm
 - "z" = back / attack
@@ -36,3 +37,4 @@ Good luck! ;)
 
 ## Licenses
  ©2017 Leonardo G Coelho. Undertale é uma obra de Toby Fox. Todos direitos reservados.
+ 
